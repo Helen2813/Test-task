@@ -1,0 +1,84 @@
+.description {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    justify-content: space-around;
+}
+
+.description-props {
+    text-align: right;
+}
+
+.description-props h3 {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.description-props__list-item {
+    list-style-type: none;
+    margin: 20px;
+}
+
+.treeline, .treeline ul, .treeline li {
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    list-style: none;
+}
+.treeline ul {
+    margin: 0 0 0 15px;
+}
+.treeline > li:not(:only-child), .treeline li li {
+    position: relative;
+    padding: 3px 0 0 20px;
+}
+
+.treeline li:not(:last-child) {
+    border-left: 1px solid #ccc;
+}
+
+.treeline li li:before, .treeline > li:not(:only-child):before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 1.1em;
+    height: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.treeline li:last-child:before {
+    width: calc(1.1em - 1px); border-left: 1px solid #ccc;
+}
+
+.description-value {
+    margin-top: 18px;
+    position: relative;
+}
+
+.description-value::before {
+    position: absolute;
+    content: '';
+    font-size: 26px;
+    border: 1px solid black;
+    top: -13px;
+    left: -8px;
+    width: 14px;
+    height: 12px;
+    border-radius: 7px;
+    color: black;
+}
+
+.description-value::after {
+    position: absolute;
+    content: '_';
+    top: -22px;
+    left: -4px;
+    width: 20px;
+    height: 12px;
+    color: black;
+}
+
+.description-props__list-item {
+    margin-right: 20px;
+    line-height: 20px;
+}
